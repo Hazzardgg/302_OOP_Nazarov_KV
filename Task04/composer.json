@@ -5,7 +5,7 @@
             "App\\": "src/"
         },
         "files": [
-            "compareStrings.php",
+            "src/compareStrings.php",
             "src/Test.php"
         ]
     },
