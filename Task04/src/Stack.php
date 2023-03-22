@@ -57,11 +57,11 @@ class Stack implements StackInterface
         if ($this->isEmpty()) {
             return "[]";
         } else {
-            $temp = "[";
+            $temp = "";
             foreach ($this->stack as $index => $elem) {
-                $temp = $temp . $elem . "->";
+                $temp = $elem . "->" . $temp;
             }
-            return substr($temp, 0, -2) . "]";
+            return "[" . substr($temp, 0, -2) . "]";
         }
     }
 }

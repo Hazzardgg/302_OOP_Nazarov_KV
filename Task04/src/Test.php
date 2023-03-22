@@ -14,7 +14,7 @@ function runTest()
 
     //"Push" test
     $stack1->push(2, 3);
-    echo "Ожидается: [1->2->3]" . PHP_EOL;
+    echo "Ожидается: [3->2->1]" . PHP_EOL;
     echo "Получено: " . $stack1 . PHP_EOL;
 
     //"Pop" test
@@ -27,7 +27,7 @@ function runTest()
     echo "Получено: " . $stack1->top() . PHP_EOL;
 
     //"Copy" test
-    echo "Ожидается: [1->2->3]" . PHP_EOL;
+    echo "Ожидается: [3->2->1]" . PHP_EOL;
     echo "Получено: " . $stack1->copy() . PHP_EOL;
 
     //"isEmpty" test
