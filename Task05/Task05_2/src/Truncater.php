@@ -1,27 +1,30 @@
 <?php
 
-class Truncator
+namespace App;
+
+class Truncater
 {
     public static $defaultOptions = [
         'separator' => '...',
         'length' => 50
     ];
+    private $options = [];
 
     public function __construct($options = [])
     {
-        self::$defaultOptions = array_merge(self::$defaultOptions, $options);
+        $this->options = array_merge(self::$defaultOptions, $options);
     }
 
     public function truncate($string, $options = [])
     {
-        $currentOption = array_merge(self::$defaultOptions, $options);
+        $currentOption = array_merge($this->options, $options);
         $length = $currentOption['length'];
         $separator = $currentOption['separator'];
 
-        if (strlen($string) <= $length) {
+        if (mb_strlen($string, 'utf-8') <= $length) {
             return $string;
         }
 
-        return substr($string, 0, $length - strlen($separator)) . $separator;
+        return mb_substr($string, 0, $length) . $separator;
     }
 }
