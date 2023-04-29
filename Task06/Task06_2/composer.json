@@ -1,12 +1,9 @@
 {
-    "name": "kirill/task06_1",
+    "name": "kirill/task06_2",
     "autoload": {
         "psr-4": {
             "App\\": "src/"
-        },
-        "files": [
-            "src/collectMoney.php"
-        ]
+        }
     },
     "authors": [
         {
