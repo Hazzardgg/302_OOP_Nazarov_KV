@@ -33,3 +33,10 @@ function createFraction(numerator, denominator) {
         }
     }
 }
+
+function Fraction(numerator, denominator) {
+    this.numerator = numerator;
+    this.denominator = denominator;
+    
+}
+
